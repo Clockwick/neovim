@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/arthris/Dev/TypeScript/public'
+let g:netrw_dirhist_3='/Users/arthris/Dev/TypeScript'
+let g:netrw_dirhist_2='/Users/arthris/Dev/TypeScript/src'
+let g:netrw_dirhist_1='/Users/arthris/Dev/TypeScript'
