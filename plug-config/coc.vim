@@ -147,3 +147,33 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Explorer
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\      'root-uri': '~/.vim',
+\   },
+\   'floating': {
+\      'position': 'floating',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\   },
+\   'floatingLeftside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'floatingRightside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'simplify': {
+\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
+nmap <space>e :CocCommand explorer<CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

@@ -21,7 +21,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
-set laststatus=0                        " Always display the status line
+"set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
@@ -33,6 +33,17 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set statusline=
+set statusline+=%#DiffAdd#
+set statusline+=\ %M
+set statusline+=\ %y
+set statusline+=\ %r
+set statusline+=\ %F
+set statusline+=%=
+set statusline+=%#RedrawDebugNormal#
+set statusline+=\ %c:%l/%L
+set statusline+=\ %p%%
+set statusline+=\ [%n]
 "set autochdir                           " Your working directory will always be the same as your working directory
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

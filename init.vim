@@ -27,56 +27,74 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/plugged')
 " Main Plugin
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar'
-Plug 'vifm/vifm.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'HerringtonDarkholme/yats.vim'
-" Color Scheme
+Plug 'glench/vim-jinja2-syntax'
+Plug 'jiangmiao/auto-pairs'
+Plug 'justinmk/vim-sneak'
+Plug 'unblevable/quick-scope'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'mhinz/vim-startify'
+" Colorscheme
 Plug 'morhetz/gruvbox'
-Plug 'nanotech/jellybeans.vim'
-Plug 'tomasr/molokai'
+Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
-Plug 'kien/rainbow_parentheses.vim'
-
+" Jsx and Tsx
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 filetype plugin on    " required
-" ==========================================================Setting====================================================="
+" ======================================================================Setting======================================================================================="
 source $HOME/.config/nvim/general/settings.vim
-"=====================================================Status============================================================"
-set statusline=
-set statusline+=%#DiffAdd#
-set statusline+=\ %M
-set statusline+=\ %y
-set statusline+=\ %r
-set statusline+=\ %F
-set statusline+=%=
-set statusline+=%#RedrawDebugNormal#
-set statusline+=\ %c:%l/%L
-set statusline+=\ %p%%
-set statusline+=\ [%n]
-
-
-" =================================================Font Style==========================================================="
+" ========================================================================Coc========================================================================================="
+source $HOME/.config/nvim/plug-config/coc.vim
+" =======================================================================Sneak========================================================================================"
+source $HOME/.config/nvim/plug-config/sneak.vim
+" =======================================================================Sneak========================================================================================"
+source $HOME/.config/nvim/plug-config/quickscope.vim
+" =======================================================================Prettier========================================================================================"
+source $HOME/.config/nvim/plug-config/prettier.vim
+" =======================================================================Starify====================================================================================="
+source $HOME/.config/nvim/plug-config/start-screen.vim
+" =====================================================================Font Style====================================================================================="
 let g:gruvbox_italic=1
-" =================================================Color Setting========================================================"
-
-colorscheme molokai 
+" =====================================================================Color Setting=================================================================================="
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-let g:gruvbox_termcolors=256
-" =====================================================Map============================================================== "
+" Rainbow Time
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{','}']]
+" =====================================================================Transparent===================================================================================="
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE
+set termguicolors
+colorscheme gruvbox 
+let t:is_transparent = 1
+
+function! Toggle_transparent()
+    if t:is_transparent == 1
+        hi! Normal ctermbg=NONE guibg=NONE 
+        hi! NonText ctermbg=NONE guibg=NONE
+        let t:is_transparent = 0
+    else
+        hi! Normal ctermbg=Black guibg=#212A2F
+        hi! NonText ctermbg=Black guibg=#212A2F
+        let t:is_transparent = 1
+    endif
+endfunction
+nnoremap <C-t> : call Toggle_transparent()<CR>
+" ========================================================================Map========================================================================================="
 source $HOME/.config/nvim/keys/mappings.vim
-map <Space> :EditVifm .<CR>
+"map <Space> :EditVifm .<CR>
 map <ENTER> :Goyo<CR>
-map <F1> :colorscheme gruvbox<CR>
-map <F2> :colorscheme molokai<CR>
+map <F1> :colorscheme gruvbox<CR> 
+map <F3> :colorscheme onedark<CR> 
+map <C-p> :RainbowParentheses !!<CR>
 
 nnoremap Q <nop>
 
@@ -88,25 +106,4 @@ nnoremap <C-k> <C-W>k
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-" =====================================================Goyo============================================================== "
-function! s:goyo_enter()
-  set noshowmode
-  set noshowcmd
-  set nocursorline
-  Limelight
-  " ...
-endfunction
 
-function! s:goyo_leave()
-  set showmode
-  set showcmd
-  set cursorline
-  Limelight!
-  " ...
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-
-" =====================================================Live server============================================================== "

@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/Users/arthris/Dev/TypeScript/public'
-let g:netrw_dirhist_3='/Users/arthris/Dev/TypeScript'
-let g:netrw_dirhist_2='/Users/arthris/Dev/TypeScript/src'
-let g:netrw_dirhist_1='/Users/arthris/Dev/TypeScript'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/arthris/Dev/DjReact/backend/DjReact/articles/api'
+let g:netrw_dirhist_0='/Users/arthris/Dev/DjReact/backend/DjReact/articles'
+let g:netrw_dirhist_9='/Users/arthris/Dev/React/react-bootstrap/src/components'
+let g:netrw_dirhist_8='/Users/arthris/Dev/React/marioplan/src'
+let g:netrw_dirhist_7='/Users/arthris/Dev/React/marioplan'
+let g:netrw_dirhist_6='/Users/arthris/Dev/React'
+let g:netrw_dirhist_5='/Users/arthris/Dev/React/counter-app/src'
+let g:netrw_dirhist_4='/Users/arthris/Dev/React/counter-app'
+let g:netrw_dirhist_3='/Users/arthris/Dev/React'
+let g:netrw_dirhist_2='/Users/arthris/Dev/React/react-firebase/src'
