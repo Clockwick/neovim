@@ -5,17 +5,16 @@
     "javascript",
     "javascriptreact",
     "graphql",
-    "html",
     "yaml",
     "json",
     "python"
   ],
-  // python config
+  // Python Configuration
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "python.jediEnabled": false,
-  // explorer
+  // Explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
