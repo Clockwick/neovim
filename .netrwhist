@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/arthris/dev/React/twitty/twitty'
+let g:netrw_dirhist_7='/Users/arthris/dev/React/twitty/twitty/twite'
 let g:netrw_dirhist_6='/Users/arthris/Desktop'
 let g:netrw_dirhist_5='/Users/arthris/dev/React/tweetme2/tweetme/tweets'
 let g:netrw_dirhist_4='/Users/arthris/Dev/React/tweetme2'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_2='/Users/arthris/Dev/React/tweetme2/tweetme/tweets'
 let g:netrw_dirhist_1='/Users/arthris/Dev/React/tweetme2/tweetme/templates/pages'
 let g:netrw_dirhist_0='/Users/arthris/Dev/React/tweetme2/tweetme/templates/components'
 let g:netrw_dirhist_9='/Users/arthris/Dev/React/tweetme2/tweetme'
-let g:netrw_dirhist_8='/Users/arthris/Dev/React/tweetme2/tweetme/tweetme'
-let g:netrw_dirhist_7='/Users/arthris/Dev/React/tweetme2/tweetme/templates/components'

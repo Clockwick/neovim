@@ -12,7 +12,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc') 
   endif
 
-  call dein#end()
+  call dein#end() 
   call dein#save_state()
 endif
 
@@ -42,6 +42,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'whatyouhide/vim-gotham'
 Plug 'tomasiser/vim-code-dark'
+Plug 'tomasr/molokai'
 "Syntax highlight
 " 
 " Fzf
@@ -91,4 +92,4 @@ let g:onedark_color_overrides = {
 \ "black": {"gui": "#232323", "cterm": "235", "cterm16": "0" },
 \ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
 \}
-colorscheme onedark  
+colorscheme molokai 
