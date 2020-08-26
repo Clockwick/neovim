@@ -5,7 +5,7 @@ endif
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim 
 if dein#load_state('~/.cache/dein') 
   call dein#begin('~/.cache/dein') 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim') 
   call dein#add('Shougo/deoplete.nvim')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp') 
@@ -92,4 +92,4 @@ let g:onedark_color_overrides = {
 \ "black": {"gui": "#232323", "cterm": "235", "cterm16": "0" },
 \ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
 \}
-colorscheme molokai 
+source $HOME/.config/nvim/themes/xcodedark.vim
