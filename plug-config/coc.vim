@@ -174,11 +174,10 @@ let g:coc_explorer_global_presets = {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
 \   }
 \ }
-nmap <space>e :CocCommand explorer<CR>
+nmap <space>c :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 
 " rename
 nmap <leader>rr <Plug>(coc-rename)
-
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>

@@ -1,5 +1,3 @@
-" set leader key
-let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighting
 set number relativenumber
@@ -43,6 +41,7 @@ set statusline+=%=
 set statusline+=%#RedrawDebugNormal#
 set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
-set statusline+=\ [%n]
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2  " always display the status lineet statusline+=\ [%n]
 "set autochdir                           " Your working directory will always be the same as your working directory
 
