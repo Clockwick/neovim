@@ -1,5 +1,5 @@
 if &compatible 
-  set nocompatible
+  set nocompatible 
 endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
@@ -16,24 +16,20 @@ if dein#load_state('~/.cache/dein')
   call dein#save_state()
 endif
 
+
 filetype plugin indent on
-syntax enable
 " set the runtime path to include Vundle and initialize set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin('~/.vim/plugged')
-" Main Plugin
+call plug#begin('~/.vim/plugged') " Main Plugin Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
-Plug 'junegunn/goyo.vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'glench/vim-jinja2-syntax'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
-Plug 'sainnhe/sonokai'
+Plug 'tpope/vim-fugitive'
+Plug 'neovim/nvim-lspconfig'
 " Colorscheme
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'morhetz/gruvbox'
@@ -44,37 +40,30 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
 Plug 'hzchirs/vim-material'
 Plug 'ParamagicDev/vim-medic_chalk'
-"Syntax highlight
-" 
-" Fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Syntax highlight Fzf
 Plug 'airblade/vim-rooter'
+" Coc neovim
+
 call plug#end()
 filetype plugin on    " required
+
+" ======================================================================COC======================================================================================="
+source $HOME/.config/nvim/plug-config/coc.vim
 " ======================================================================Setting======================================================================================="
 source $HOME/.config/nvim/general/settings.vim
-" ========================================================================Coc========================================================================================="
-source $HOME/.config/nvim/plug-config/coc.vim
-" =========================================================================Prettier==================================================================================="
-source $HOME/.config/nvim/plug-config/prettier.vim
-" ========================================================================Starify====================================================================================="
-source $HOME/.config/nvim/plug-config/fzf.vim
 " ==========================================================================FZF======================================================================================="
 source $HOME/.config/nvim/plug-config/start-screen.vim
-" ==========================================================================FZF======================================================================================="
-source $HOME/.config/nvim/plug-config/airline.vim
-" ===================================================================== Syntax ======================================================================================="
-source $HOME/.config/nvim/plug-config/polyglot.vim
 " ===================================================================== Easy motion ======================================================================================="
 source $HOME/.config/nvim/plug-config/easymotion.vim
 " ========================================================================Map========================================================================================="
 source $HOME/.config/nvim/keys/mappings.vim
-" Rainbow Time
-let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{','}']]
+" ========================================================================Map========================================================================================="
+source $HOME/.config/nvim/plug-config/lspconfig.rc.vim
+" ========================================================================Quick normal========================================================================================="
+inoremap jk <Esc>
+inoremap kj <Esc>
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 "hi! Normal ctermbg=NONE guibg=NONE 
 "hi! NonText ctermbg=NONE guibg=NONE
@@ -94,10 +83,10 @@ let g:onedark_color_overrides = {
 \}
 
 let g:python_highlight_space_errors = 0
-source $HOME/.config/nvim/themes/brogrammer.vim
+"source $HOME/.config/nvim/themes/brogrammer.vim
 "Dark
 "set background=dark
-"colorscheme vim-material
+colorscheme vim-material
 
 "Palenight
 "let g:material_style='palenight'

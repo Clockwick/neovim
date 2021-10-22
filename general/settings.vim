@@ -1,6 +1,6 @@
 
 syntax enable                           " Enables syntax highlighting
-set number relativenumber
+set number
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -19,7 +19,7 @@ set shiftwidth=2                        " Change the number of space characters 
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
+set autoindent
 "set laststatus=0                        " Always display the status line
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
@@ -41,7 +41,5 @@ set statusline+=%=
 set statusline+=%#RedrawDebugNormal#
 set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
-set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2  " always display the status lineet statusline+=\ [%n]
-"set autochdir                           " Your working directory will always be the same as your working directory
+set autochdir                           " Your working directory will always be the same as your working directory
 
