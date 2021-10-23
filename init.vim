@@ -27,6 +27,9 @@ set expandtab
 set shell=fish
 set backupskip=/tmp/*,/private/tmp/*
 
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 " incremental substitution (neovim)
 if has('nvim')
   set inccommand=split
@@ -146,3 +149,4 @@ set exrc
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:
+let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10'
