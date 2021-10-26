@@ -142,7 +142,6 @@ if exists("&termguicolors") && exists("&winblend")
 endif
 
 "}}}
-
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
