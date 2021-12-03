@@ -4,7 +4,7 @@ nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
 nnoremap x "_x
-
+inoremap {<Enter> {<Enter>}<Esc>O
 " Increment/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
@@ -34,9 +34,7 @@ vnoremap <silent> # :<C-U>
 " Tabs
 
 " Open current directory
-nmap te :tabedit 
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+" nmap te :tabedit 
 
 "------------------------------
 " Windows
@@ -60,3 +58,5 @@ nmap <C-l> <C-w>>
 nmap <C-k> <C-w>+
 nmap <C-j> <C-w>-
 
+" Unhighlight search result
+nnoremap <silent> <C-l> :nohl<CR><C-l>

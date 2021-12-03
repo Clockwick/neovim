@@ -22,6 +22,11 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'kyazdani42/nvim-tree.lua'
+  Plug 'windwp/nvim-ts-autotag'
+  Plug 'romgrk/barbar.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

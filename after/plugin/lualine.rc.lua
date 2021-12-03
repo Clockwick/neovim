@@ -39,7 +39,8 @@ local config = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
-    theme = 'solarized_dark',
+    -- theme = 'solarized_dark',
+    theme = 'gruvbox',
   },
   sections = {
     -- these are to remove the defaults
@@ -76,7 +77,7 @@ ins_left {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.orange }, -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 }
 
@@ -122,7 +123,7 @@ ins_left {
 ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.magenta, gui = 'bold' },
+  color = { fg = colors.red, gui = 'bold' },
 }
 
 ins_left { 'location' }
@@ -187,7 +188,7 @@ ins_right {
 ins_right {
   'branch',
   icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
+  color = { fg = colors.green, gui = 'bold' },
 }
 
 ins_right {
@@ -206,7 +207,7 @@ ins_right {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue },
+  color = { fg = colors.orange },
   padding = { left = 1 },
 }
 
