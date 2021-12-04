@@ -29,9 +29,9 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('open', 'pedit')
 	  nnoremap <silent><buffer><expr> o
 	  \ defx#do_action('open_or_close_tree')
-	  nnoremap <silent><buffer><expr> K
+	  nnoremap <silent><buffer><expr> d
 	  \ defx#do_action('new_directory')
-	  nnoremap <silent><buffer><expr> N
+	  nnoremap <silent><buffer><expr> n
 	  \ defx#do_action('new_file')
 	  nnoremap <silent><buffer><expr> M
 	  \ defx#do_action('new_multiple_files')

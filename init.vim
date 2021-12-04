@@ -135,7 +135,7 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  " Use NeoSolarized
+  "Use NeoSolarized
   "let g:neosolarized_termtrans=1
   "runtime ./colors/NeoSolarized.vim
   "colorscheme NeoSolarized
@@ -144,10 +144,11 @@ if exists("&termguicolors") && exists("&winblend")
 endif
 
 "}}}
+
 " Extras "{{{
 " ---------------------------------------------------------------------
+" vim: set foldmethod=marker foldlevel=0:
+let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10'
 set exrc
 "}}}
 
-" vim: set foldmethod=marker foldlevel=0:
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10'
